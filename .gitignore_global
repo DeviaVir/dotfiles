@@ -1,0 +1,7 @@
+.idea
+*.iml
+*.swp
+*.pyc
+*.class
+.vagrant
+.DS_Store
