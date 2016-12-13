@@ -1,0 +1,24 @@
+{
+  "web_app" : {
+    "last_uri" : ""
+  },
+  "nuvola" : {
+    "window" : {
+      "maximized" : false,
+      "sidebar" : {
+        "position" : 858
+      },
+      "x" : 1920,
+      "y" : 81,
+      "width" : 1912,
+      "height" : 2075
+    },
+    "dark_theme" : true
+  },
+  "format_support" : {
+    "warn_flash" : false
+  },
+  "player" : {
+    "background_playback" : true
+  }
+}

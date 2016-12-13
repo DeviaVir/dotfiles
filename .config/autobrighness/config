@@ -1,0 +1,13 @@
+[CONFIG]
+deviece = /dev/video0
+minimum_brightness = 8
+maximum_brightness = 8
+transition = 4000
+numberofpictures = 2
+timebetweenpictures = 1
+mode = precise
+
+[DoNotChange]
+x = 
+y = 
+

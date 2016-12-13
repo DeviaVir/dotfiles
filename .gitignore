@@ -13,7 +13,13 @@
 /.cache/
 /.cassandra/
 /.certificates/
-/.config/
+/.config/chromium/
+/.config/dconf/
+/.config/Franz/
+/.config/gconf/
+/.config/google-chrome/
+/.config/menus/
+/.config/pulse/
 /.cups/
 /.dbshell
 /.docker/
