@@ -71,7 +71,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -182,6 +182,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 #bindcode 113 exec amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec lux -a 15%
 bindsym XF86MonBrightnessDown exec lux -s 15%
+bindsym $mod+v exec anamnesis --browse
 
 # Workspaces
 set $tag1 "1: www"
@@ -216,3 +217,4 @@ exec-always --no-startup-id xflux -z 94102
 exec --no-startup-id setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
+exec --no-startup-id anamnesis --start
