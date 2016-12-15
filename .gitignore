@@ -64,6 +64,7 @@
 /.psql_history
 /.pylint*/
 /.python_history
+/.purple/
 /.rbenv/
 /.rediscli_history
 /.rnd
