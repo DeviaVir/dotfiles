@@ -122,7 +122,6 @@ export NVM_DIR="/home/chase/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # history search
-bindkey -e
 bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 bindkey '^[[A' history-beginning-search-backward

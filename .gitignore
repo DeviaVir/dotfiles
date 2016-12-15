@@ -20,6 +20,11 @@
 /.config/google-chrome/
 /.config/menus/
 /.config/pulse/
+/.config/sublime-text-3/Cache/
+/.config/sublime-text-3/Index/
+/.config/sublime-text-3/Local/
+/.config/sublime-text-3/Packages/User/Package\ Control.cache/
+/.config/sublime-text-3/Packages/User/Package\ Control.last-run
 /.cups/
 /.dbshell
 /.docker/
