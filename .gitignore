@@ -1,4 +1,6 @@
 /.config/Unknown\ Organization/
+/.config/zoomus.conf
+
 /.CFUserTextEncoding
 /.IntelliJIdea14/
 /.IntelliJIdea15/
@@ -48,6 +50,7 @@
 /.m2/
 /.mitmproxy/
 /.mongorc.js
+/.netrc
 /.neoman/
 /.node-gyp/
 /.node_repl_history
