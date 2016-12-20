@@ -21,6 +21,8 @@
 		"SublimeLinter-contrib-sass-lint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-jshint",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
 		"Twig"
 	]
 }
