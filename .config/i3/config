@@ -218,5 +218,5 @@ exec --no-startup-id setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id anamnesis --start
-exec --no-startup-id compton -f
+#exec --no-startup-id compton -f
 exec --no-startup-id albert
