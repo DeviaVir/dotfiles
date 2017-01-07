@@ -171,7 +171,7 @@ bar {
 client.focused          #000000 #000000 #ffffff #000000   #111111
 
 # Custom binds
-#bindsym $mod+space exec "rofi -show run"
+bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
 bindsym $mod+l exec "i3lock -c 000000"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
@@ -182,7 +182,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 #bindcode 113 exec amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec lux -a 15%
 bindsym XF86MonBrightnessDown exec lux -s 15%
-bindsym $mod+v exec anamnesis --browse
+#bindsym $mod+v exec anamnesis --browse
 
 # Workspaces
 set $tag1 "1: www"
