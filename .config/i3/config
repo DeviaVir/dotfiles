@@ -212,11 +212,11 @@ exec xrdb -merge ~/.Xresources
 exec killall gpg-agent &
 exec source .zshrc &
 
-exec xset r rate 150 30
-exec-always --no-startup-id xflux -z 94102
+exec xset r rate 200 30
 exec --no-startup-id setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
-exec --no-startup-id anamnesis --start
+#exec --no-startup-id anamnesis --start
 #exec --no-startup-id compton -f
-exec --no-startup-id albert
+#exec --no-startup-id albert
+exec --no-startup-id clipit

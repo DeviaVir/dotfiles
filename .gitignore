@@ -134,3 +134,5 @@
 .multirust
 .pex/
 .rustup/
+.gimp-2.8/
+.thumbnails/
