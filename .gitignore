@@ -128,7 +128,6 @@
 /.zoom/
 /.zshrc.pre-oh-my-zsh
 /Screenshots/
-.alacritty.yml
 .cargo/
 .config/VirtualBox/
 .multirust
