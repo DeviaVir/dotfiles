@@ -136,3 +136,6 @@
 .rustup/
 .gimp-2.8/
 .thumbnails/
+.tmux/resurrect/
+.nano/
+__pycache__
