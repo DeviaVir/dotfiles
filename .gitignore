@@ -138,3 +138,5 @@
 .tmux/resurrect/
 .nano/
 __pycache__
+.wine/
+.liquidsky/
