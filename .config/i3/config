@@ -170,6 +170,21 @@ bar {
 
 client.focused          #000000 #000000 #ffffff #000000   #111111
 
+# exec
+exec xrdb -merge ~/.Xresources
+
+exec killall gpg-agent &
+exec source .zshrc &
+
+exec xset r rate 250 30
+exec setxkbmap us -variant intl
+exec --no-startup-id redshift -l 52.229170:5.166897 &
+exec --no-startup-id libinput-gestures-setup start
+#exec --no-startup-id anamnesis --start
+#exec --no-startup-id compton -f
+#exec --no-startup-id albert
+exec --no-startup-id clipit
+
 # Custom binds
 bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
@@ -209,17 +224,3 @@ bindsym $mod+Shift+5 move container to workspace $tag5
 bindsym $mod+Shift+6 move container to workspace $tag6
 bindsym $mod+Shift+7 move container to workspace $tag7
 
-# exec
-exec xrdb -merge ~/.Xresources
-
-exec killall gpg-agent &
-exec source .zshrc &
-
-exec xset r rate 250 30
-exec --no-startup-id setxkbmap us -variant intl
-exec --no-startup-id redshift -l 52.229170:5.166897 &
-exec --no-startup-id libinput-gestures-setup start
-#exec --no-startup-id anamnesis --start
-#exec --no-startup-id compton -f
-#exec --no-startup-id albert
-exec --no-startup-id clipit

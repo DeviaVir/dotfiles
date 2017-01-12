@@ -7,6 +7,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="Electron"/>
       <value type="string" value="notify-send"/>
+      <value type="string" value="pulseaudio_dlna"/>
       <value type="string" value="Xfce4-notifyd settings"/>
     </property>
   </property>

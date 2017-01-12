@@ -10,3 +10,5 @@ bind '"\e[B": history-search-forward'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+source /etc/bashrc_fitbit
