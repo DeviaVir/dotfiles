@@ -22,3 +22,6 @@
 [submodule ".tmux/plugins/tmux-net-speed"]
 	path = .tmux/plugins/tmux-net-speed
 	url = git@github.com:DeviaVir/tmux-net-speed.git
+[submodule ".tmux/plugins/tmux-better-mouse-mode"]
+	path = .tmux/plugins/tmux-better-mouse-mode
+	url = git@github.com:NHDaly/tmux-better-mouse-mode.git

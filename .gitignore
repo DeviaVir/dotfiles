@@ -141,3 +141,5 @@ __pycache__
 .wine/
 .liquidsky/
 .dev_setup_config.yml
+.macromedia/
+.mozilla/
