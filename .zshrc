@@ -27,8 +27,12 @@ export EDITOR=/usr/bin/vim
 export LC_CTYPE=en_US.utf-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-xset r rate 150 30
-xrdb -merge ~/.Xresources
+arch_check='ARCH'
+uname=$(uname -a)
+if [[ $uname == *"$arch_check"* ]]; then
+	xset r rate 150 30
+	xrdb -merge ~/.Xresources
+fi
 
 #powerline
 pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')

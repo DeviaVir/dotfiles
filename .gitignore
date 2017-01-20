@@ -143,3 +143,4 @@ __pycache__
 .dev_setup_config.yml
 .macromedia/
 .mozilla/
+.babel.json

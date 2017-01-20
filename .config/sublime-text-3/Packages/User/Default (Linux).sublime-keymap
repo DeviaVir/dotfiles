@@ -1,4 +1,8 @@
 [
 	{ "keys": ["f3"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
-	{ "keys": ["ctrl+g"], "command": "find_next" }
+	{ "keys": ["ctrl+shift+g"], "command": "find_prev" },
+	{ "keys": ["ctrl+g"], "command": "find_next" },
+	{ "keys": ["ctrl+shift+alt+i"], "command": "toggle_overwrite" },
+	{ "keys": ["ctrl+k"], "command": "find_under_expand_skip" },
+	{ "keys": ["ctrl+d"], "command": "find_under_expand" },
 ]

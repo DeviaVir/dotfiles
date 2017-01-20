@@ -23,6 +23,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pyflakes",
-		"Twig"
+		"Twig",
+		"Vue Syntax Highlight"
 	]
 }

@@ -185,6 +185,13 @@ exec --no-startup-id libinput-gestures-setup start
 #exec --no-startup-id albert
 exec --no-startup-id clipit
 
+# startup programs
+exec --no-startup-id i3-msg 'workspace 1:www; exec /usr/bin/chromium'
+exec --no-startup-id i3-msg 'workspace 2:code; exec /usr/bin/sublime_text'
+exec --no-startup-id i3-msg 'workspace 3:term; exec /usr/bin/xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace 4:im; exec /usr/bin/franz-bin'
+exec --no-startup-id i3-msg 'workspace 5:av; exec /usr/bin/nylas'
+
 # Custom binds
 bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
