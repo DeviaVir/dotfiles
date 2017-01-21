@@ -56,6 +56,8 @@
 /.neoman/
 /.node-gyp/
 /.node_repl_history
+.config/wireshark
+android-marshmallow.img
 /.npm/
 /.npmrc
 /.nvm/

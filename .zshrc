@@ -120,6 +120,7 @@ alias fuck='eval $(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
 alias ducks='du -cks * | sort -rn | head'
 alias md5sum='md5 -r'
+alias localandroid='qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda android-marshmallow.img'
 
 # nvm
 export NVM_DIR="/home/chase/.nvm"
