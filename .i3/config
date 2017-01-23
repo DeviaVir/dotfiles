@@ -58,7 +58,7 @@ set $tag7 "7: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack, FontAwesome 12
+font pango: Ubuntu, FontAwesome 11
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -276,7 +276,7 @@ assign [class="(?i)chromium"]                          $tag1
 assign [class="(?i)sublime_text" window_type="splash"] $tag2
 assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)nylas"]                             $tag5
-assign [class="(?i)franz-bin"]                         $tag4
+assign [class="(?i)Franz"]                             $tag4
 assign [class="(?i)xfce4-terminal"]                    $tag3
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -286,7 +286,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Hack, FontAwesome 11
+    font pango: Ubuntu, FontAwesome 11
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop

@@ -149,3 +149,4 @@ __pycache__
 .mozilla/
 .babel.json
 .sslkeylog
+.config/configstore/
