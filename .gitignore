@@ -58,6 +58,7 @@
 /.node_repl_history
 .config/wireshark
 android-marshmallow.img
+android-marshmallow.img.pcapng
 /.npm/
 /.npmrc
 /.nvm/
@@ -90,6 +91,7 @@ android-marshmallow.img
 /.vagrant.d/
 /.vim/.netrwhist
 /.viminfo
+/.viminfo.tmp
 /.yubioath/
 /.Xauthority
 /.xsession-*
@@ -146,3 +148,4 @@ __pycache__
 .macromedia/
 .mozilla/
 .babel.json
+.sslkeylog

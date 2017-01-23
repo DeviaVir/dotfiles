@@ -87,4 +87,5 @@ rofi.color-window: #393939, #393939, #268bd2
 rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
-rofi.font: Ubuntu 24
+rofi.font: Hack 24
+rofi.opacity: 80

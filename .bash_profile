@@ -8,7 +8,5 @@ export LANG=en_US.UTF-8
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
-source /etc/bashrc_fitbit
+[ -f "/etc/bashrc_fitbit" ] && source /etc/bashrc_fitbit
+[ -f "${HOME}/.bashrc" ] && source ${HOME}/.bashrc
