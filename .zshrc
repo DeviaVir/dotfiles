@@ -30,7 +30,6 @@ export LANG=en_US.UTF-8
 arch_check='ARCH'
 uname=$(uname -a)
 if [[ $uname == *"$arch_check"* ]]; then
-	xset r rate 150 30
 	xrdb -merge ~/.Xresources
 fi
 

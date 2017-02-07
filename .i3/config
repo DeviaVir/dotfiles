@@ -51,7 +51,7 @@ bindsym $mod+Tab workspace back_and_forth
 set $tag1 "1: "
 set $tag2 "2: "
 set $tag3 "3: "
-set $tag4 "4: "
+set $tag4 "4: "
 set $tag5 "5: "
 set $tag6 "6: "
 set $tag7 "7: "
