@@ -150,3 +150,6 @@ __pycache__
 .babel.json
 .sslkeylog
 .config/configstore/
+.viminfz.tmp
+.java/
+.config/icedtea-web/

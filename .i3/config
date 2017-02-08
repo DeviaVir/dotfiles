@@ -304,8 +304,8 @@ bar {
         focused_workspace  $transparent $transparent $white
         inactive_workspace $transparent $transparent $black
         active_workspace   $transparent $transparent $darkblack
-        urgent_workspace   $darkred     $darkred     $transparent
-        binding_mode       $darkred     $darkred     $transparent
+        urgent_workspace   $white       $white       $black
+        binding_mode       $white       $white       $black
     }
 }
 
@@ -313,7 +313,7 @@ bar {
 client.focused          $black      $black      $darkwhite  $darkblack  $darkblack
 client.unfocused        $black      $black      $white      $darkblack  $darkblack
 client.focused_inactive $black      $black      $white      $darkblack  $darkblack
-client.urgent           $darkred    $darkred    $black      $darkred    $darkred
+client.urgent           $white      $white      $black      $white      $white
 client.background       $black
 
 # exec

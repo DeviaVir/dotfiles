@@ -3,7 +3,7 @@
     smudge = git-lfs smudge %f
     required = true
 [user]
-    email = chase@pebble.com
+    email = chase@sillevis.net
     name = Chase Sillevis
     signingKey = AA570BF1
 [push]
@@ -23,3 +23,5 @@
     pretty = %Cred%h%Creset - %C(bold blue)%G? %aN%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)
 [github]
     user = deviavir
+[http "https://gopkg.in"]
+	followRedirects = true
