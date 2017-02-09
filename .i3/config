@@ -339,12 +339,13 @@ exec --no-startup-id /usr/bin/xfce4-terminal
 exec --no-startup-id /usr/bin/franz-bin
 exec --no-startup-id /usr/bin/nylas
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
+exec --no-startup-id nm-applet
 
 
 # Custom binds
 bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
-bindsym $mod+l exec "i3lock -c 000000"
+bindsym $mod+l exec "i3lock-fancy -gpf Ubuntu -- scrot -z"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
 bindsym XF86AudioMute exec amixer -q set Master toggle
