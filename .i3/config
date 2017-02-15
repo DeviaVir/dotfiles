@@ -326,11 +326,10 @@ exec xset r rate 250 30
 exec setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
-#exec --no-startup-id anamnesis --start
-exec --no-startup-id compton -b
-#exec --no-startup-id albert
 exec --no-startup-id clipit
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/cNexYaj.jpg
+exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
+exec --no-startuo-id compton -c
 
 # startup programs
 exec --no-startup-id /usr/bin/chromium
@@ -345,7 +344,7 @@ exec --no-startup-id nm-applet
 # Custom binds
 bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
-bindsym $mod+l exec "i3lock-fancy -gpf Ubuntu -- scrot -z"
+bindsym $mod+l exec "i3lock -c 000000"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
 bindsym XF86AudioMute exec amixer -q set Master toggle

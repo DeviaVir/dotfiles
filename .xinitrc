@@ -17,5 +17,7 @@ xset s noblank
 xset r rate 250 30
 setxkbmap us -variant intl
 
+
+compton &
+
 exec i3
-#exec /home/ingo/repos/i3-original/build/i3 -c /home/ingo/.i3/config.vanilla
