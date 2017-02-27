@@ -153,3 +153,4 @@ __pycache__
 .viminfz.tmp
 .java/
 .config/icedtea-web/
+.thunderbird/

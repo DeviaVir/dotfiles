@@ -5,6 +5,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=~/.local/lib/go/
 export TASKDDATA=$HOME/.config/taskd
 
+# nvm
+export NVM_DIR="/home/chase/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 path=("$PYENV_ROOT/bin" $path)
 path=('/opt/android-sdk/platform-tools' $path)
 path=('/opt/android-sdk/tools' $path)

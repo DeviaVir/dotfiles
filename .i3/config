@@ -276,6 +276,7 @@ assign [class="(?i)chromium"]                          $tag1
 assign [class="(?i)sublime_text" window_type="splash"] $tag2
 assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)nylas"]                             $tag5
+assign [class="(?i)thunderbird"]                       $tag5
 assign [class="(?i)Franz"]                             $tag4
 assign [class="(?i)xfce4-terminal"]                    $tag3
 
@@ -319,7 +320,6 @@ client.background       $black
 # exec
 exec xrdb -merge ~/.Xresources
 
-exec killall gpg-agent &
 exec source .zshrc &
 
 exec xset r rate 250 30
@@ -329,7 +329,7 @@ exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/cNexYaj.jpg
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
-exec --no-startuo-id compton -c
+exec --no-startup-id compton -c
 
 # startup programs
 exec --no-startup-id /usr/bin/chromium
@@ -337,6 +337,7 @@ exec --no-startup-id /usr/bin/sublime_text
 exec --no-startup-id /usr/bin/xfce4-terminal
 exec --no-startup-id /usr/bin/franz-bin
 exec --no-startup-id /usr/bin/nylas
+#exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
 exec --no-startup-id nm-applet
 
