@@ -330,6 +330,7 @@ exec --no-startup-id clipit
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/cNexYaj.jpg
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id compton -c
+exec --no-startup-id thunar --daemon
 
 # startup programs
 exec --no-startup-id /usr/bin/chromium
@@ -344,7 +345,8 @@ exec --no-startup-id nm-applet
 
 # Custom binds
 bindsym $mod+space exec "rofi -show run"
-bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
+#bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
+bindsym Print exec --no-startup-id xfce4-screenshooter -r -s ~/Screenshots
 bindsym $mod+l exec "i3lock -c 000000"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
