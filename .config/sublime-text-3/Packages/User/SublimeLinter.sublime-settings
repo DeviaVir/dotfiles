@@ -7,6 +7,21 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "annotations": {
+                "@disable": false,
+                "args": [],
+                "errors": [
+                    "FIXME"
+                ],
+                "excludes": [],
+                "warnings": [
+                    "NOTE",
+                    "README",
+                    "TODO",
+                    "XXX",
+                    "@todo"
+                ]
+            },
             "flake8": {
                 "@disable": false,
                 "args": [],
@@ -16,7 +31,7 @@
                 "ignore": "",
                 "jobs": "1",
                 "max-complexity": -1,
-                "max-line-length": null,
+                "max-line-length": 150,
                 "select": "",
                 "show-code": false
             },
@@ -35,8 +50,13 @@
                 "args": [],
                 "excludes": [],
                 "ignore": "",
-                "max-line-length": null,
+                "max-line-length": 150,
                 "select": ""
+            },
+            "phplint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
             },
             "pyflakes": {
                 "@disable": false,
@@ -54,13 +74,18 @@
         "passive_warnings": false,
         "paths": {
             "linux": [
-            	"/home/chase/.nvm/versions/node/v7.3.0/bin/"
+                "/home/chase/.nvm/versions/node/v7.3.0/bin/",
+                "/usr/bin/",
+                "/home/chase/.local/bin/"
             ],
             "osx": [],
             "windows": []
         },
         "python_paths": {
-            "linux": [],
+            "linux": [
+                "/usr/bin/",
+                "/home/chase/.local/bin/"
+            ],
             "osx": [],
             "windows": []
         },

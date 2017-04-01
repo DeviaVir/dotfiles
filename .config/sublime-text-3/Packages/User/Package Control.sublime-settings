@@ -19,6 +19,7 @@
 		"SFTP",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-annotations",
 		"SublimeLinter-contrib-jslint",
 		"SublimeLinter-contrib-sass-lint",
 		"SublimeLinter-flake8",

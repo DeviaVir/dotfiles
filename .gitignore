@@ -154,3 +154,7 @@ __pycache__
 .java/
 .config/icedtea-web/
 .thunderbird/
+.config/Mattermost/
+.config/libreoffice/
+.config/qutebrowser/
+.config/vlc/
