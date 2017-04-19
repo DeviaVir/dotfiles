@@ -1,9 +1,14 @@
 #oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 DEFAULT_USER="chase"
 DISABLE_AUTO_UPDATE="false"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git git-extras mosh vi-mode docker pass systemd docker docker-compose)
+# npm install --global pure-prompt
+#autoload -U promptinit; promptinit
+#prompt pure
+ZSH_THEME="bullet-train"
 source $ZSH/oh-my-zsh.sh
 
 HISTFILE=~/.zsh_history
@@ -27,6 +32,8 @@ export EDITOR=/usr/bin/vim
 export LC_CTYPE=en_US.utf-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export VAGRANT_SYNCHED_FOLDER=/home/chase/
+export VAGRANT_MEMORY_SIZE=3084
 arch_check='ARCH'
 uname=$(uname -a)
 if [[ $uname == *"$arch_check"* ]]; then
@@ -111,9 +118,6 @@ if [ ! -z "$SSH_TTY" ]; then
     export SSH_AUTH_SOCK="$HOME/.ssh/agent_sock"
 fi
 
-# theme
-ZSH_THEME="bullet-train"
-
 # aliases
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
@@ -127,3 +131,4 @@ bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
+

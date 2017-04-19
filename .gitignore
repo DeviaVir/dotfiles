@@ -162,3 +162,5 @@ __pycache__
 .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml
 .config/Namecoin
 .namecoin
+.aurora/
+.config/sublime-text-3/Backup/
