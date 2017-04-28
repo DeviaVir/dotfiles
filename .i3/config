@@ -350,6 +350,7 @@ exec --no-startup-id nm-applet
 bindsym $mod+space exec "rofi -show run"
 #bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
 bindsym Print exec --no-startup-id xfce4-screenshooter -r -s ~/Screenshots
+bindsym $mod+i exec "imgur-screenshot"
 bindsym $mod+l exec "i3lock -c 000000"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-

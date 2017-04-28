@@ -1,0 +1,52 @@
+## General options
+set header_cache = "~/.cache/mutt"
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 90
+set mbox_type=Maildir
+
+## Accounts
+# Passwords
+set my_pass_sillevis=`pass DeviaVir/Email/chase.sillevis.net`
+set my_pass_fitbit=`pass DeviaVir/Email/chase.sillevis.fitbit.com`
+set my_pass_etopia=`pass DeviaVir/Email/chase.etopia.nl`
+set my_pass_pebble=`pass DeviaVir/Email/chase.pebble.com`
+
+# chase.sillevis@fitbit.com
+source ~/.mutt/chase.sillevis.fitbit.com
+folder-hook $folder 'source ~/.mutt/chase.sillevis.fitbit.com'
+
+# chase@etopia.nl
+source ~/.mutt/chase.etopia.nl
+folder-hook $folder 'source ~/.mutt/chase.etopia.nl'
+
+# chase@pebble.com
+source ~/.mutt/chase.pebble.com
+folder-hook $folder 'source ~/.mutt/chase.pebble.com'
+
+# chase@sillevis.net
+source ~/.mutt/chase.sillevis.net
+folder-hook $folder 'source ~/.mutt/chase.sillevis.net'
+
+## Macros
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/chase.sillevis.net<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/chase.sillevis.fitbit.com<enter><change-folder>!<enter>'
+macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.mutt/chase.etopia.nl<enter><change-folder>!<enter>'
+macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.mutt/chase.pebble.com<enter><change-folder>!<enter>'
+bind generic,alias,attach,browser,editor,index,compose,pager,pgp,postpone ':' noop
+bind index,pager B sidebar-toggle-visible
+macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+
+# Fetch mail shortcut
+bind index G imap-fetch-mail
+
+## HTML
+set mailcap_path="~/.mutt/mailcap"
+auto_view text/html                                      # view html automatically
+alternative_order text/plain text/enriched text/html     # save html for last
+set implicit_autoview=yes                # Load in pager if setting in .mailcap says 'copiousoutput'
+
+## Extras
+source ~/.mutt/gpg.rc
+source ~/.mutt/colors

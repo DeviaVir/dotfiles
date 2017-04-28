@@ -165,3 +165,9 @@ __pycache__
 .aurora/
 .config/sublime-text-3/Backup/
 .config/IRCCloud/
+.config/Keybase/
+.config/imgur-screenshot/
+.config/keybase/
+.config/orage/
+.imgur-screenshot.log
+.mutt/cache/
