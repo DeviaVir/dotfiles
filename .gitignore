@@ -171,3 +171,4 @@ __pycache__
 .config/orage/
 .imgur-screenshot.log
 .mutt/cache/
+.mutt/muttrc
