@@ -4,3 +4,7 @@ image/jpeg=ristretto.desktop;wine-extension-jpe.desktop;
 application/x-7z-compressed=userapp-7za-2Y9SWY.desktop;
 video/quicktime=vlc.desktop;
 video/mp4=vlc.desktop;
+
+[Default Applications]
+x-scheme-handler/nylas=nylas.desktop
+x-scheme-handler/tg=telegramdesktop.desktop

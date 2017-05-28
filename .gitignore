@@ -172,3 +172,6 @@ __pycache__
 .imgur-screenshot.log
 .mutt/cache/
 .mutt/muttrc
+.pypirc
+.kube/
+.minikube/

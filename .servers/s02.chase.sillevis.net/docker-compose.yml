@@ -1,0 +1,54 @@
+lotc-web:
+  build: ./lordofthecode/lordofthecode.nl/
+  command: npm start
+  links:
+    - lotc-db
+  environment:
+    - VIRTUAL_HOST=www.lordofthecode.nl
+    - MONGO_URI=mongodb://lotc-db/lotc
+    - PORT=80
+    - DOMAIN=www.lordofthecode.nl
+    - LETSENCRYPT_HOST=www.lordofthecode.nl
+    - LETSENCRYPT_EMAIL=chase@sillevis.net
+  ports:
+    - "80"
+lotc-db:
+  image: mongo:3.0.2
+  volumes:
+    - ./data/lordofthecode.nl/db:/data/db
+
+nginx-proxy:
+  image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./data/certs:/etc/nginx/certs:ro
+    - ./data/configs:/etc/nginx/vhost.d:ro
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+    - ./data/html:/usr/share/nginx/html
+  environment:
+    - ENABLE_IPV6=true
+nginx-proxy-ssl:
+  image: jrcs/letsencrypt-nginx-proxy-companion
+  volumes_from:
+    - nginx-proxy
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    - ./data/certs:/etc/nginx/certs:rw
+    - ./data/html:/usr/share/nginx/html:rw
+    - ./data/configs:/etc/nginx/vhost.d
+nginx-proxy-tcp:
+  image: tekn0ir/nginx-stream
+  volumes:
+    - ./data/tcp/nginx.conf:/opt/nginx/stream.conf.d/ldap.conf
+  ports:
+    - "340:340"
+
+bitlbee:
+  image: deviavir/docker-bitlbee
+  ports:
+    - 6667:6667
+  volumes:
+    - ./data/bitlbee:/var/lib/bitlbee:rw
+    - ./data/bitlbee/bitlbee.conf:/etc/bitlbee/bitlbee.conf
