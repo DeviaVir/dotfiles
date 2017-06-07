@@ -43,7 +43,7 @@ force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
 
 floating_minimum_size -1 x -1
-floating_maximum_size -1 x -1
+floating_maximum_size 2000 x 2000
 
 bindsym $mod+Tab workspace back_and_forth
 
