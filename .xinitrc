@@ -17,8 +17,9 @@ xset s noblank
 xset r rate 250 30
 setxkbmap us -variant intl
 
+export $(dbus-launch)
+dbus-update-activation-environment --systemd DISPLAY
+export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+
 exec i3
 compton &
-
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
