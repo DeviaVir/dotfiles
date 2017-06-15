@@ -186,4 +186,10 @@ __pycache__
 .electron/
 .nylas-mail/
  .config/sublime-text-3/
-
+.config/gtk-2.0/
+.config/gtk-3.0/
+.config/mimeapps.list
+.config/thefuck/
+.config/xfce4/help.rc
+.config/xfce4/terminal/
+.yarnrc
