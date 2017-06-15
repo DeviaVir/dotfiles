@@ -17,7 +17,8 @@ xset s noblank
 xset r rate 250 30
 setxkbmap us -variant intl
 
-
+exec i3
 compton &
 
-exec i3
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK

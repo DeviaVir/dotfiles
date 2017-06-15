@@ -27,6 +27,9 @@ alias vi=/usr/bin/vim
 # there will be time to write sudo when I'm dead
 alias pacman='sudo pacman'
 
+# custom work things
+[ -f "/etc/bashrc_fitbit" ] && source /etc/bashrc_fitbit
+
 # defaults
 export EDITOR=/usr/bin/vim
 export LC_CTYPE=en_US.utf-8

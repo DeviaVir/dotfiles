@@ -177,3 +177,13 @@ __pycache__
 .minikube/
 .ipython/
 .jupyter/
+.atom/
+.config/Atom/
+.config/Nylas Mail/
+.config/autostart/nylas-mail.desktop
+.config/composer/
+.config/git/
+.electron/
+.nylas-mail/
+ .config/sublime-text-3/
+
