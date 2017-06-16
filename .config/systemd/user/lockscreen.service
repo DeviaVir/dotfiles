@@ -6,7 +6,7 @@ Before=suspend.target
 User=chase
 Type=oneshot
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/i3lock -c 000000
+ExecStart=/usr/bin/sh /home/chase/.scripts/lock.sh
 ExecStart=/usr/bin/gpgconf --reload scdaemon
 
 [Install]

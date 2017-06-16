@@ -354,7 +354,7 @@ bindsym $mod+space exec "rofi -show run"
 #bindsym Print exec --no-startup-id maim --select ~/Screenshots/$(date +%F-%T).png
 bindsym Print exec --no-startup-id xfce4-screenshooter -r -s ~/Screenshots
 bindsym $mod+i exec --no-startup-id imgur-screenshot
-bindsym $mod+l exec "i3lock -n -i $HOME/.config/wallpapers/cNexYaj.jpg"
+bindsym $mod+l exec "sh /home/chase/.scripts/lock.sh"
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
 bindsym XF86AudioMute exec amixer -q set Master toggle
