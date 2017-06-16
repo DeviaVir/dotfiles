@@ -17,6 +17,4 @@ xset s noblank
 xset r rate 250 30
 setxkbmap us -variant intl
 
-compton &
-
 exec i3

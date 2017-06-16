@@ -339,11 +339,11 @@ exec --no-startup-id thunar --daemon
 # startup programs
 exec --no-startup-id /usr/bin/chromium
 #exec --no-startup-id /usr/bin/sublime_text
-exec --no-startup-id /usr/bin/atom
+#exec --no-startup-id /usr/bin/atom
 exec --no-startup-id /usr/bin/alacritty
 #exec --no-startup-id /usr/bin/franz-bin
 exec --no-startup-id /usr/bin/irccloud
-#exec --no-startup-id /usr/bin/nylas
+exec --no-startup-id /usr/bin/nylas
 #exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
 exec --no-startup-id nm-applet

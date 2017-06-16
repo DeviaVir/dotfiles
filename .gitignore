@@ -192,4 +192,6 @@ __pycache__
 .config/thefuck/
 .config/xfce4/help.rc
 .config/xfce4/terminal/
+.config/xfce4/xfconf/
 .yarnrc
+.config/Thunar/
