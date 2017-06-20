@@ -347,6 +347,7 @@ exec --no-startup-id /usr/bin/nylas
 #exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
 exec --no-startup-id nm-applet
+exec --no-startup-id "/bin/systemctl --user import-environment"
 
 
 # Custom binds

@@ -195,3 +195,6 @@ __pycache__
 .config/xfce4/xfconf/
 .yarnrc
 .config/Thunar/
+.config/Mumble/
+.config/sublime-text-3/
+.config/Trolltech.conf
