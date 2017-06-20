@@ -1,0 +1,58 @@
+"*":
+  "autocomplete-python":
+    useKite: false
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "atom-ftp-editor"
+      "linter-python-pep8"
+      "linter-ansible-syntax"
+      "linter-csslint"
+      "linter-sass-lint"
+      "linter-scss-lint"
+      "linter-terraform-syntax"
+      "linter-tidy"
+      "linter-travis-lint"
+      "linter-pyflakes"
+      "linter-pycodestyle"
+    ]
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "limited"
+    themes: [
+      "bliss-ui"
+      "loved-syntax"
+    ]
+  editor:
+    fontSize: 13
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
+  linter: {}
+  "linter-eslint":
+    fixOnSave: false
+    globalNodePath: "/home/chase/.nvm/versions/node/v7.3.0"
+    useGlobalEslint: true
+  "linter-phpmd": {}
+  "linter-puppet-lint":
+    executablePath: "/home/chase/.gem/ruby/2.4.0/bin/puppet-lint"
+    oldVersion: false
+  "linter-python":
+    executablePath: "/home/chase/.local/bin/pylama"
+    lintTrigger: "File saved or modified"
+    withPep8: true
+    withPyflakes: true
+    withPylint: true
+  "linter-scss-lint":
+    executablePath: "/home/chase/.gem/ruby/2.4.0/bin/scss-lint"
+  "linter-ui-default":
+    hidePanelWhenEmpty: true
+    panelHeight: 81
+    showPanel: true
+  minimap:
+    plugins:
+      linter: true
+      linterDecorationsZIndex: 0
+  "minimap-linter":
+    markerType: "gutter"
+  welcome:
+    showOnStartup: false
