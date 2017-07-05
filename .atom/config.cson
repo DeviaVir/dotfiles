@@ -5,16 +5,6 @@
     autoHideMenuBar: true
     disabledPackages: [
       "atom-ftp-editor"
-      "linter-python-pep8"
-      "linter-ansible-syntax"
-      "linter-csslint"
-      "linter-sass-lint"
-      "linter-scss-lint"
-      "linter-terraform-syntax"
-      "linter-tidy"
-      "linter-travis-lint"
-      "linter-pyflakes"
-      "linter-pycodestyle"
     ]
     excludeVcsIgnoredPaths: false
     telemetryConsent: "limited"
@@ -38,7 +28,8 @@
     oldVersion: false
   "linter-python":
     executablePath: "/home/chase/.local/bin/pylama"
-    lintTrigger: "File saved or modified"
+    ignoreCodes: "C0411,W0105,C0111"
+    optionsFile: "/home/chase/.pylama.ini"
     withPep8: true
     withPyflakes: true
     withPylint: true
