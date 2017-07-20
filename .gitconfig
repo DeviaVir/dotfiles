@@ -25,3 +25,5 @@
     user = deviavir
 [http "https://gopkg.in"]
 	followRedirects = true
+[core]
+	excludesfile = /home/chase/.gitignore_global
