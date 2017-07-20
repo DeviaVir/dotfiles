@@ -48,6 +48,10 @@ pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //
 pl_zsh_module=${pl_python_path}/powerline/bindings/zsh/powerline.zsh
 [ -f "$pl_zsh_module" ] && source "$pl_zsh_module"
 
+#nvm
+export NVM_DIR="/home/chase/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 #travis
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
 

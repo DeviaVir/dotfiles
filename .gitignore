@@ -198,3 +198,9 @@ __pycache__
 .config/Mumble/
 .config/sublime-text-3/
 .config/Trolltech.conf
+.config/Jaxx/
+.config/autostart/
+.config/wavebox/
+.pdepend/
+.w3m/
+a.out

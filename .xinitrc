@@ -10,8 +10,9 @@ fi
 
 xrdb -load ~/.Xresources
 
-xset s off
+xset s off -dpms
 xset -dpms
+xset dpms 0 0 0
 xset s noblank
 
 xset r rate 250 30

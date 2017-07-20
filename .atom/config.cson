@@ -13,10 +13,11 @@
       "loved-syntax"
     ]
   editor:
-    fontSize: 13
     scrollPastEnd: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
+  "file-types":
+    pipeline: "source.groovy"
   linter: {}
   "linter-eslint":
     fixOnSave: false

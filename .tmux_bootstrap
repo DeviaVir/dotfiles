@@ -1,0 +1,6 @@
+#!/bin/bash
+
+tmux ls | grep 'deviavir' > /dev/null || (
+  tmux new-session -d -s 'deviavir'
+)
+exec tmux attach -t 'deviavir'

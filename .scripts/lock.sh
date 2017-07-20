@@ -8,5 +8,5 @@ then
 fi
 
 # dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
-i3lock -u -i /tmp/screen.png
+i3lock -u -i /tmp/screen.png -c 000000
 rm /tmp/screen.png
