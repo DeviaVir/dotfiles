@@ -1,3 +1,6 @@
+#bash
+[ -f "$HOME/.bash_profile" ] && source "$HOME/.bash_profile"
+
 #oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
@@ -20,6 +23,7 @@ unsetopt beep
 
 # Always use gpg2
 [ -f /usr/bin/gpg2 ] && alias gpg="/usr/bin/gpg2"
+gpgconf --create-socketdir
 
 # vi -> vim
 alias vi=/usr/bin/vim
