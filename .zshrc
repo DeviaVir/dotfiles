@@ -23,7 +23,6 @@ unsetopt beep
 
 # Always use gpg2
 [ -f /usr/bin/gpg2 ] && alias gpg="/usr/bin/gpg2"
-gpgconf --create-socketdir
 
 # vi -> vim
 alias vi=/usr/bin/vim
