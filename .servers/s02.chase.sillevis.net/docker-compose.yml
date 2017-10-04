@@ -1,4 +1,37 @@
+highvelocity-mining:
+  restart: always  
+  build: ./highvelocityspace/mining/
+  volumes:
+    - ./highvelocityspace/mining:/var/www
+  command: nginx
+  ports:
+    - "80"
+  environment:
+    - VIRTUAL_HOST=mining.highvelocity.space
+    - PORT=80
+    - DOMAIN=mining.highvelocity.space
+    - LETSENCRYPT_HOST=mining.highvelocity.space
+    - LETSENCRYPT_EMAIL=chase@sillevis.net
+
+alfred:
+  restart: always
+  build: ./dualdev/alfred/
+  command: gunicorn -w 4 alfred.wsgi --bind 0.0.0.0:80
+  ports:
+    - "80"
+  environment:
+    - VIRTUAL_HOST=alfred.dualdev.io
+    - PORT=80
+    - DOMAIN=alfred.dualdev.io
+    - LETSENCRYPT_HOST=alfred.dualdev.io
+    - LETSENCRYPT_EMAIL=chase@sillevis.net
+    - DEBUG=True
+    - SW_TOKEN=*REDACTED*
+    - SW_REGION=*REDACTED*
+    - WEBHOOK_SECRET=*REDACTED*
+
 lotc-web:
+  restart: always
   build: ./lordofthecode/lordofthecode.nl/
   command: npm start
   links:
@@ -13,11 +46,13 @@ lotc-web:
   ports:
     - "80"
 lotc-db:
+  restart: always
   image: mongo:3.0.2
   volumes:
     - ./data/lordofthecode.nl/db:/data/db
 
 nginx-proxy:
+  restart: always
   image: jwilder/nginx-proxy
   ports:
     - "80:80"
@@ -30,6 +65,7 @@ nginx-proxy:
   environment:
     - ENABLE_IPV6=true
 nginx-proxy-ssl:
+  restart: always
   image: jrcs/letsencrypt-nginx-proxy-companion
   volumes_from:
     - nginx-proxy
@@ -39,6 +75,7 @@ nginx-proxy-ssl:
     - ./data/html:/usr/share/nginx/html:rw
     - ./data/configs:/etc/nginx/vhost.d
 nginx-proxy-tcp:
+  restart: always
   image: tekn0ir/nginx-stream
   volumes:
     - ./data/tcp/nginx.conf:/opt/nginx/stream.conf.d/ldap.conf
@@ -46,9 +83,19 @@ nginx-proxy-tcp:
     - "340:340"
 
 bitlbee:
+  restart: always
   image: deviavir/docker-bitlbee
   ports:
     - 6667:6667
   volumes:
     - ./data/bitlbee:/var/lib/bitlbee:rw
     - ./data/bitlbee/bitlbee.conf:/etc/bitlbee/bitlbee.conf
+
+mumble:
+  restart: always
+  image: pebbletech/docker-mumble
+  volumes:
+    - /home/chase/mumble/certs:/etc/ssl/localcerts
+    - /home/chase/mumble/lib:/var/lib/mumble-server
+  ports:
+    - 64738:64738
