@@ -27,6 +27,9 @@ unsetopt beep
 # vi -> vim
 alias vi=/usr/bin/vim
 
+# ls -> exa
+alias ls=exa
+
 # there will be time to write sudo when I'm dead
 alias pacman='sudo pacman'
 

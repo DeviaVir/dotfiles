@@ -13,5 +13,5 @@ export VISUAL=$EDITOR
 
 # make sure this is an interactive session, then start tmux
 [[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && source "$HOME/.tmux_bootstrap"
 [[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+[[ -z "$TMUX" ]] && source "$HOME/.tmux_bootstrap"
