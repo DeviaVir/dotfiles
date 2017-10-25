@@ -5,7 +5,7 @@
 [user]
     email = chase@sillevis.net
     name = Chase Sillevis
-    signingKey = AA570BF1
+    signingKey = 8EB884FD
 [push]
     default = simple
 [color]
