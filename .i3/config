@@ -278,6 +278,7 @@ assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)atom"]                              $tag2
 assign [class="(?i)xfce4-terminal"]                    $tag3
 assign [class="(?i)alacritty"]                         $tag3
+assign [class="(?i)mailspring"]                        $tag5
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -336,11 +337,11 @@ exec --no-startup-id thunar --daemon
 # startup programs
 exec --no-startup-id /usr/bin/chromium
 #exec --no-startup-id /usr/bin/sublime_text
-#exec --no-startup-id /usr/bin/atom
+exec --no-startup-id /usr/bin/atom
 exec --no-startup-id /usr/bin/alacritty
 #exec --no-startup-id /usr/bin/franz-bin
 #exec --no-startup-id /usr/bin/irccloud
-#exec --no-startup-id /usr/bin/nylas
+exec --no-startup-id /var/lib/snapd/snap/bin/mailspring
 #exec --no-startup-id /usr/bin/wavebox
 #exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
