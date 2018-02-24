@@ -36,9 +36,11 @@
     withPylint: true
   "linter-scss-lint":
     executablePath: "/home/chase/.gem/ruby/2.4.0/bin/scss-lint"
+  "linter-travis-lint":
+    travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 81
+    panelHeight: 80.7589340209961
     showPanel: true
   minimap:
     plugins:
