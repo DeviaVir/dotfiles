@@ -31,7 +31,7 @@ set $black       #282828
 set $darkblack   #1d2021
 set $transparent #00000000
 
-set $height 42
+set $height 34
 
 set $default_gaps_inner 0
 set $default_gaps_outer 0
@@ -58,7 +58,7 @@ set $tag7 "7: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Font Awesome 5 Free, Ubuntu Condensed
+font pango: Roboto, Font Awesome 5 Free 32px
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -286,7 +286,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango: Font Awesome 5 Free, Roboto 30px
+    font pango: Roboto, Font Awesome 5 Free 32px
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
