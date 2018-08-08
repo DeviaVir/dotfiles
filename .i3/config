@@ -43,7 +43,7 @@ force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
 
 floating_minimum_size -1 x -1
-floating_maximum_size 2000 x 2000
+floating_maximum_size 1920 x 1080
 
 bindsym $mod+Tab workspace back_and_forth
 
@@ -58,7 +58,7 @@ set $tag7 "7: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Roboto, Font Awesome 5 Free 32px
+font pango: Roboto, Font Awesome 5 Free 16px
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -273,12 +273,15 @@ for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
 assign [class="(?i)chromium"]                          $tag1
+assign [class="(?i)zoom"]                              $tag4
 assign [class="(?i)sublime_text" window_type="splash"] $tag2
 assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)atom"]                              $tag2
 assign [class="(?i)xfce4-terminal"]                    $tag3
 assign [class="(?i)alacritty"]                         $tag3
 assign [class="(?i)mailspring"]                        $tag5
+assign [class="(?i)whatever"]                          $tag6
+assign [class="(?i)signal"]                            $tag4
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -287,18 +290,18 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango: Roboto, Font Awesome 5 Free 32px
+    font pango: Roboto, Font Awesome 5 Free 16px
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
     tray_output eDP1
-    tray_output LVDS-0
+    tray_output DP1
     tray_padding 2
-    height $height
+    height 25
     workspace_buttons yes
     strip_workspace_numbers yes
     colors {
-        statusline         $black
+        statusline         $white
         background         $transparent
         separator          $transparent
 
@@ -328,14 +331,16 @@ exec setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/cNexYaj.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/J4NZVSdgI491NDHWNX6T2V0SSceR_g_Dpwh_aR6HYzE.jpg
 #exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
-exec --no-startup-id "xss-lock -- i3lock -n -i $HOME/.config/wallpapers/cNexYaj.jpg"
+#exec --no-startup-id "xss-lock -- i3lock -n -i $HOME/.config/wallpapers/cNexYaj.jpg"
 exec --no-startup-id compton -c
 exec --no-startup-id thunar --daemon
 
 # startup programs
 exec --no-startup-id /usr/bin/chromium
+#exec --no-startup-id /home/chase/.local/bin/whatever
+exec --no-startup-id /usr/bin/signal-desktop
 #exec --no-startup-id /usr/bin/sublime_text
 exec --no-startup-id /usr/bin/atom
 exec --no-startup-id /usr/bin/alacritty
@@ -347,7 +352,7 @@ exec --no-startup-id /var/lib/snapd/snap/bin/mailspring
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
 exec --no-startup-id nm-applet
 exec --no-startup-id "/bin/systemctl --user import-environment"
-exec_always --no-startup-id "xset dpms 0 0 0"
+exec_always --no-startup-id "xset s 1800 1800"
 
 
 # Custom binds
@@ -368,7 +373,6 @@ gaps inner 10
 gaps outer 0
 smart_gaps on
 smart_borders on
-
 
 bindsym $mod+1 workspace $tag1
 bindsym $mod+2 workspace $tag2

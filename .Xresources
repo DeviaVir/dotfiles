@@ -21,7 +21,7 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
-urxvt*font: xft:Hack:pixelsize=21:antialias=true
+urxvt*font: xft:Hack:pixelsize=12:antialias=true
 URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease
 URxvt.keysym.C-S-Up:   font-size:incglobal
@@ -68,13 +68,13 @@ URxvt.keysym.C-S-Down: font-size:decglobal
 *color15: #fdf6e3
 
 !! HiDPI
-Xft.dpi: 200
 Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: 1
 Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
 Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 
 !Xft.antialias:           rgba
 !Xft.hinting:             true
@@ -87,5 +87,5 @@ rofi.color-window: #393939, #393939, #268bd2
 rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
-rofi.font: Hack 24
+rofi.font: Hack 12
 rofi.opacity: 80

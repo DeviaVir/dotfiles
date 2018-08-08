@@ -18,8 +18,10 @@
 /.cache/
 /.cassandra/
 /.certificates/
+/.config/0ad/
 /.config/chromium/
 /.config/dconf/
+/.config/Epic/
 /.config/Franz/
 /.config/gconf/
 /.config/google-chrome/
@@ -205,3 +207,25 @@ __pycache__
 .w3m/
 a.out
 mumble/
+.config/GIMP/
+.config/Ledger\ Live/
+.config/Signal/
+.config/Whatever/
+.config/Yubico/
+.config/gcloud/
+.config/openrazer/
+.config/pavucontrol.ini
+.config/ristretto/
+.config/unity3d/
+.drirc
+.electron-gyp/
+.gsutil/
+.histfile
+.kde4
+.mysql_history
+.nv/
+.pulse-cookie
+.steam/
+.steampath
+.steampid
+snap/

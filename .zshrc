@@ -1,3 +1,6 @@
+#zlogin
+[ -f "$HOME/.zlogin" ] && source "$HOME/.zlogin"
+
 #bash
 [ -f "$HOME/.bash_profile" ] && source "$HOME/.bash_profile"
 
@@ -43,11 +46,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export VAGRANT_SYNCHED_FOLDER=/home/chase/
 export VAGRANT_MEMORY_SIZE=3084
-arch_check='ARCH'
-uname=$(uname -a)
-if [[ $uname == *"$arch_check"* ]]; then
-	xrdb -merge ~/.Xresources
-fi
 
 #powerline
 pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')
@@ -84,7 +82,7 @@ if [ -z "$SSH_TTY" ]; then
 	fi
 
 	# Get latest gpg-agent socket location and expose for use by SSH
-	eval "$(cat "$envfile")" && export SSH_AUTH_SOCK
+	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) 
 
 	# Wake up smartcard to avoid races
 	gpg --card-status > /dev/null 2>&1
