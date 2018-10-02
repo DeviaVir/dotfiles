@@ -2,16 +2,17 @@
   "autocomplete-python":
     useKite: false
   core:
+    autoHideMenuBar: true
     disabledPackages: [
       "atom-ftp-editor"
     ]
-    excludeVcsIgnoredPaths: false
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
-      "bliss-ui"
+      "one-dark-ui"
       "loved-syntax"
     ]
   editor:
+    fontFamily: "Fira Code, Menlo, Monospace"
     scrollPastEnd: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
@@ -20,7 +21,7 @@
   linter: {}
   "linter-eslint":
     fixOnSave: false
-    globalNodePath: "/home/chase/.nvm/versions/node/v10.3.0"
+    globalNodePath: "/usr"
     useGlobalEslint: true
   "linter-phpmd":
     autoExecutableSearch: false

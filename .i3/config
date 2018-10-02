@@ -76,7 +76,7 @@ font pango: Roboto, Font Awesome 5 Free 16px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -279,9 +279,12 @@ assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)atom"]                              $tag2
 assign [class="(?i)xfce4-terminal"]                    $tag3
 assign [class="(?i)alacritty"]                         $tag3
+assign [class="(?i)kitty"]                             $tag3
 assign [class="(?i)mailspring"]                        $tag5
 assign [class="(?i)whatever"]                          $tag6
 assign [class="(?i)signal"]                            $tag4
+assign [class="(?i)prismatik"]                         $tag6
+assign [class="(?i)steam"]                             $tag6
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -294,8 +297,9 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    tray_output eDP1
-    tray_output DP1
+    #tray_output eDP1
+    #tray_output DP1
+    tray_output primary
     tray_padding 2
     height 25
     workspace_buttons yes
@@ -328,7 +332,7 @@ exec source .zshrc &
 
 exec xset r rate 250 30
 exec setxkbmap us -variant intl
-exec --no-startup-id redshift -l 52.229170:5.166897 &
+exec --no-startup-id redshift &
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/J4NZVSdgI491NDHWNX6T2V0SSceR_g_Dpwh_aR6HYzE.jpg
@@ -343,10 +347,12 @@ exec --no-startup-id /usr/bin/chromium
 exec --no-startup-id /usr/bin/signal-desktop
 #exec --no-startup-id /usr/bin/sublime_text
 exec --no-startup-id /usr/bin/atom
-exec --no-startup-id /usr/bin/alacritty
+#exec --no-startup-id /usr/bin/alacritty
+exec --no-startup-id /usr/bin/kitty
 #exec --no-startup-id /usr/bin/franz-bin
 #exec --no-startup-id /usr/bin/irccloud
-exec --no-startup-id /var/lib/snapd/snap/bin/mailspring
+#exec --no-startup-id /var/lib/snapd/snap/bin/mailspring
+exec --no-startup-id /usr/bin/prismatik
 #exec --no-startup-id /usr/bin/wavebox
 #exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
@@ -365,8 +371,8 @@ bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
 bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
-bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/.scripts/backlight.sh -dec 10
-bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/.scripts/backlight.sh -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 #bindsym $mod+v exec anamnesis --browse
 
 gaps inner 10

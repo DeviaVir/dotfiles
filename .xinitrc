@@ -19,6 +19,6 @@ xset s noblank
 xset r rate 250 30
 setxkbmap us -variant intl
 
-(xrandr | grep -q "DP-2 connected") && xrandr --output DP-2 --mode 3440x1440 --rate 100 --primary
+(xrandr | grep -q "DP-4 connected") && xrandr --output DP-4 --mode 3440x1440 --rate 100 --primary
 
 exec i3

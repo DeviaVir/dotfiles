@@ -135,7 +135,6 @@ alias FUCK='fuck'
 alias ducks='du -cks * | sort -rn | head'
 alias md5sum='md5 -r'
 alias localandroid='qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda android-marshmallow.img'
-alias dd.services="( cd ~/Sites/dualdev/services && CONFIG=~/Sites/dualdev/services/config.js USELOCALCORE=~/Sites/dualdev/core/dist npm run dev )"
 
 # history search
 bindkey -e
