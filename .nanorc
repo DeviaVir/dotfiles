@@ -1,6 +1,0 @@
-set mouse
-set nowrap
-set positionlog
-set smarthome
-set tabsize 4
-include "/usr/share/nano/*.nanorc"
