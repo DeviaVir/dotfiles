@@ -9,10 +9,11 @@
     excludeVcsIgnoredPaths: false
     telemetryConsent: "limited"
     themes: [
-      "bliss-ui"
+      "one-dark-ui"
       "loved-syntax"
     ]
   editor:
+    fontFamily: "Fira Code, Menlo, Monospace"
     fontSize: 12
     scrollPastEnd: true
   "exception-reporting":
@@ -27,9 +28,11 @@
     fixOnSave: false
     globalNodePath: "/home/chase/.nvm/versions/node/v7.3.0"
     useGlobalEslint: true
-  "linter-phpmd": {}
+  "linter-phpmd":
+    autoExecutableSearch: false
+    executablePath: "/home/chase/.config/composer/vendor/bin/phpmd"
   "linter-puppet-lint":
-    executablePath: "/home/chase/.gem/ruby/2.4.0/bin/puppet-lint"
+    executablePath: "/home/chase/.gem/ruby/2.5.0/bin/puppet-lint"
     oldVersion: false
   "linter-python":
     executablePath: "/home/chase/.local/bin/pylama"
@@ -39,9 +42,11 @@
     withPyflakes: true
     withPylint: true
   "linter-scss-lint":
-    executablePath: "/home/chase/.gem/ruby/2.4.0/bin/scss-lint"
+    executablePath: "/home/chase/.gem/ruby/2.5.0/bin/scss-lint"
   "linter-travis-lint":
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
+  "linter-terraform-syntax":
+    useTerraformFormat: true
   "linter-ui-default":
     hidePanelWhenEmpty: true
     showPanel: true
@@ -51,6 +56,8 @@
       linterDecorationsZIndex: 0
   "minimap-linter":
     markerType: "gutter"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "terraform-fmt":
     binPath: "/usr/bin/terraform"
   welcome:
