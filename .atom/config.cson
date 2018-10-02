@@ -13,11 +13,15 @@
       "loved-syntax"
     ]
   editor:
+    fontSize: 12
     scrollPastEnd: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
   "file-types":
     pipeline: "source.groovy"
+  "go-plus":
+    format:
+      tool: "gofmt"
   linter: {}
   "linter-eslint":
     fixOnSave: false
@@ -40,7 +44,6 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 80.7589340209961
     showPanel: true
   minimap:
     plugins:
@@ -48,5 +51,7 @@
       linterDecorationsZIndex: 0
   "minimap-linter":
     markerType: "gutter"
+  "terraform-fmt":
+    binPath: "/usr/bin/terraform"
   welcome:
     showOnStartup: false

@@ -39,6 +39,7 @@ alias pacman='sudo pacman'
 # defaults
 export EDITOR=/usr/bin/vim
 export LC_CTYPE=en_US.utf-8
+export CC=/usr/bin/gcc
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export VAGRANT_SYNCHED_FOLDER=/home/chase/

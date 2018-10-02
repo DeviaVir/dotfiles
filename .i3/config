@@ -58,7 +58,7 @@ set $tag7 "7: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Roboto, Font Awesome 5 Free 32px
+font pango: Roboto, Font Awesome 5 Free Solid 32px
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -76,7 +76,7 @@ font pango: Roboto, Font Awesome 5 Free 32px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -278,6 +278,7 @@ assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)atom"]                              $tag2
 assign [class="(?i)xfce4-terminal"]                    $tag3
 assign [class="(?i)alacritty"]                         $tag3
+assign [class="(?i)kitty"]                             $tag3
 assign [class="(?i)mailspring"]                        $tag5
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -287,7 +288,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango: Roboto, Font Awesome 5 Free 32px
+    font pango: Roboto, Font Awesome 5 Free Solid 32px
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
@@ -298,7 +299,7 @@ bar {
     workspace_buttons yes
     strip_workspace_numbers yes
     colors {
-        statusline         $black
+        statusline         $white
         background         $transparent
         separator          $transparent
 
@@ -328,9 +329,9 @@ exec setxkbmap us -variant intl
 exec --no-startup-id redshift -l 52.229170:5.166897 &
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/cNexYaj.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/OAFbZbI.jpg
 #exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
-exec --no-startup-id "xss-lock -- i3lock -n -i $HOME/.config/wallpapers/cNexYaj.jpg"
+#exec --no-startup-id "xss-lock -- i3lock -n -i $HOME/.config/wallpapers/cNexYaj.jpg"
 exec --no-startup-id compton -c
 exec --no-startup-id thunar --daemon
 
@@ -338,7 +339,8 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/bin/chromium
 #exec --no-startup-id /usr/bin/sublime_text
 exec --no-startup-id /usr/bin/atom
-exec --no-startup-id /usr/bin/alacritty
+#exec --no-startup-id /usr/bin/alacritty
+exec --no-startup-id /usr/bin/kitty
 #exec --no-startup-id /usr/bin/franz-bin
 #exec --no-startup-id /usr/bin/irccloud
 exec --no-startup-id /var/lib/snapd/snap/bin/mailspring

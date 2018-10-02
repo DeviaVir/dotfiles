@@ -2,7 +2,7 @@ export EDITOR=vim
 export TZ='Europe/Amsterdam'
 export QT_DEVICE_PIXEL_RATIO=auto
 export PYENV_ROOT="$HOME/.pyenv"
-export GOPATH=~/.local/lib/go/
+export GOPATH=~/.local/lib/go
 export TASKDDATA=$HOME/.config/taskd
 
 # nvm
@@ -21,6 +21,7 @@ path=("$HOME/Sources/qemu/build/arm-softmmu" $path)
 path=("$HOME/Sources/gcc-arm-none-eabi/bin" $path)
 path=("$HOME/Sources/PebbleSDK/bin" $path)
 path=("$HOME/Sources/gcs/bin" $path)
+path=("/bin/false" $path)
 path=($^path(N)) # remove paths that don't exist
 
 # device specific env kept out of git
