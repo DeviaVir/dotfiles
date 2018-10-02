@@ -2,7 +2,7 @@ export EDITOR=vim
 export TZ='Europe/Amsterdam'
 export QT_DEVICE_PIXEL_RATIO=auto
 export PYENV_ROOT="$HOME/.pyenv"
-export GOPATH=~/.local/lib/go/
+export GOPATH=~/.local/lib/go
 export TASKDDATA=$HOME/.config/taskd
 
 # nvm
