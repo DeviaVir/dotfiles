@@ -13,7 +13,7 @@
     ]
   editor:
     fontFamily: "Fira Code, Menlo, Monospace"
-    fontSize: 12
+    fontSize: 13
     scrollPastEnd: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
@@ -48,6 +48,7 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
+    panelHeight: 80.7589340209961
     showPanel: true
   minimap:
     plugins:
@@ -55,9 +56,8 @@
       linterDecorationsZIndex: 0
   "minimap-linter":
     markerType: "gutter"
-  "tree-view":
-    hideVcsIgnoredFiles: true
   "terraform-fmt":
     binPath: "/usr/bin/terraform"
+  "tree-view": {}
   welcome:
     showOnStartup: false

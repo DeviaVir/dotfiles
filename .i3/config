@@ -332,7 +332,8 @@ exec source .zshrc &
 
 exec xset r rate 250 30
 exec setxkbmap us -variant intl
-exec --no-startup-id redshift &
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id redshift-gtk
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/J4NZVSdgI491NDHWNX6T2V0SSceR_g_Dpwh_aR6HYzE.jpg
