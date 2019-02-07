@@ -8,8 +8,8 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
-      "loved-syntax"
+      "city-lights-ui"
+      "city-lights-syntax"
     ]
   editor:
     fontFamily: "Fira Code, Menlo, Monospace"
@@ -18,6 +18,7 @@
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
   "file-types":
+    "^Dockerfile\\..*$": "source.dockerfile"
     pipeline: "source.groovy"
   "go-plus":
     format:
@@ -29,7 +30,7 @@
     useGlobalEslint: true
   "linter-phpmd":
     autoExecutableSearch: false
-    executablePath: "/home/chase/.config/composer/vendor/bin/phpmd"
+    executablePath: "/home/chase/vendor/bin/phpmd"
   "linter-puppet-lint":
     executablePath: "/home/chase/.gem/ruby/2.5.0/bin/puppet-lint"
     oldVersion: false
@@ -48,14 +49,15 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 80.7589340209961
-    showPanel: true
+    panelHeight: 290
   minimap:
     plugins:
       linter: true
       linterDecorationsZIndex: 0
   "minimap-linter":
-    markerType: "gutter"
+    markerTypeError: "gutter"
+    markerTypeInfo: "gutter"
+    markerTypeWarning: "gutter"
   "terraform-fmt":
     binPath: "/usr/bin/terraform"
   "tree-view": {}

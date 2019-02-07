@@ -27,3 +27,11 @@
 	followRedirects = true
 [core]
 	excludesfile = /home/chase/.gitignore_global
+[branch "master"]
+	mergeoptions = --ff-only
+[diff "gpg"]
+	textconv = gpg --no-tty --decrypt
+	cachetextconv = false
+[diff "ansible-vault"]
+	textconv = ansible-vault view
+	cachetextconv = false

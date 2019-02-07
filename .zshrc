@@ -31,7 +31,7 @@ unsetopt beep
 alias vi=/usr/bin/vim
 
 # ls -> exa
-alias ls=exa
+alias ls=exa --group
 
 # there will be time to write sudo when I'm dead
 alias pacman='sudo pacman'
@@ -47,6 +47,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export VAGRANT_SYNCHED_FOLDER=/home/chase/
 export VAGRANT_MEMORY_SIZE=3084
+export ELECTRON_TRASH=trash-cli
 
 #powerline
 pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')
@@ -81,6 +82,9 @@ if [ -z "$SSH_TTY" ]; then
 	    killall gpg-agent
 	    gpg-agent --daemon --enable-ssh-support > $envfile
 	fi
+
+	#gpg-connect-agent killagent /bye
+	#gpg-connect-agent updatestartuptty /bye
 
 	# Get latest gpg-agent socket location and expose for use by SSH
 	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) 
@@ -143,3 +147,6 @@ bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
+
+# opam configuration
+test -r /home/chase/.opam/opam-init/init.zsh && . /home/chase/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
