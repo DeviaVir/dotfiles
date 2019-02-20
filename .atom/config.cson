@@ -49,7 +49,7 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 290
+    panelHeight: 80.7589340209961
   minimap:
     plugins:
       linter: true
