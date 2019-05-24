@@ -1,4 +1,17 @@
 "*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#12435a"
+      accentColor: "#7d2e09"
+      genAccent: true
+      predefinedColor: "Blue Grey"
+    fonts:
+      fontSize: 18
+    tabs:
+      compactTabs: true
+    ui:
+      panelContrast: true
+      panelShadows: true
   "autocomplete-python":
     useKite: false
   core:
@@ -8,12 +21,12 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "city-lights-ui"
-      "city-lights-syntax"
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
   editor:
     fontFamily: "Fira Code, Menlo, Monospace"
-    fontSize: 13
+    fontSize: 10
     scrollPastEnd: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
@@ -25,9 +38,9 @@
       tool: "gofmt"
   linter: {}
   "linter-eslint":
-    fixOnSave: false
-    globalNodePath: "/usr"
-    useGlobalEslint: true
+    global:
+      globalNodePath: "/usr"
+      useGlobalEslint: true
   "linter-phpmd":
     autoExecutableSearch: false
     executablePath: "/home/chase/vendor/bin/phpmd"

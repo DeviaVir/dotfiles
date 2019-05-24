@@ -6,11 +6,10 @@
 
 #oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 DEFAULT_USER="chase"
 DISABLE_AUTO_UPDATE="false"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git git-extras mosh vi-mode docker pass systemd docker docker-compose)
+plugins=(git git-extras mosh vi-mode systemd docker-compose)
 # npm install --global pure-prompt
 #autoload -U promptinit; promptinit
 #prompt pure
