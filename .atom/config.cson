@@ -63,6 +63,7 @@
   "linter-ui-default":
     hidePanelWhenEmpty: true
     panelHeight: 80.7589340209961
+    showPanel: true
   minimap:
     plugins:
       linter: true
