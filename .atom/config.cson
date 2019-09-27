@@ -1,4 +1,7 @@
 "*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
   "atom-material-ui":
     colors:
       abaseColor: "#12435a"
@@ -16,8 +19,11 @@
     useKite: false
   core:
     autoHideMenuBar: true
+    closeDeletedFileTabs: true
     disabledPackages: [
       "atom-ftp-editor"
+      "go-plus"
+      "linter"
     ]
     telemetryConsent: "no"
     themes: [
@@ -25,9 +31,9 @@
       "atom-material-syntax"
     ]
   editor:
-    fontFamily: "Fira Code, Menlo, Monospace"
-    fontSize: 10
+    fontSize: 12
     scrollPastEnd: true
+    showIndentGuide: true
   "exception-reporting":
     userId: "a8c2c5fe-c8f9-4146-9e44-08c4da73a522"
   "file-types":
@@ -62,7 +68,6 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    panelHeight: 80.7589340209961
     showPanel: true
   minimap:
     plugins:
