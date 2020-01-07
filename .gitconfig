@@ -35,3 +35,7 @@
 [diff "ansible-vault"]
 	textconv = ansible-vault view
 	cachetextconv = false
+[http "https://gl.blockstream.io/"]
+	sslKey = /etc/docker/certs.d/glregistry.blockstream.io/gl.key
+	sslCert = /etc/docker/certs.d/glregistry.blockstream.io/gl.cert
+	sslVerify = false

@@ -353,7 +353,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
-exec_always --no-startup-id feh --bg-fill --randomize /home/chase/Pictures/Wallpapers/*
+exec_always --no-startup-id feh --bg-fill --randomize /home/chase/Pictures/Wallpapers/Sexy/*
 #exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id "xss-lock -- /home/chase/.scripts/lock.sh"
 exec --no-startup-id "/home/chase/.scripts/lightsonplus/lightson+"

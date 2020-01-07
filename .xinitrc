@@ -15,9 +15,10 @@ xset s off -dpms
 xset -dpms
 xset dpms 0 0 0
 xset s noblank
-
+xset mouse 1 1
 xset r rate 250 30
 setxkbmap us -variant intl
+xinput --set-prop 15 297 -1
 
 (xrandr | grep -q "DP-0 connected") && xrandr --output DP-0 --mode 3440x1440 --rate 100 --primary
 

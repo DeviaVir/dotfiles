@@ -63,6 +63,7 @@
   "linter-scss-lint":
     executablePath: "/home/chase/.gem/ruby/2.5.0/bin/scss-lint"
   "linter-terraform-syntax":
+    newVersion: true
     useTerraformFormat: true
   "linter-travis-lint":
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
