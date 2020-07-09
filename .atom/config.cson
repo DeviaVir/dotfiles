@@ -2,6 +2,7 @@
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
+      formatOnType: false
   "atom-material-ui":
     colors:
       abaseColor: "#12435a"
@@ -22,8 +23,11 @@
     closeDeletedFileTabs: true
     disabledPackages: [
       "atom-ftp-editor"
-      "go-plus"
       "linter"
+      "linter-golinter"
+      "go-plus"
+      "go-debug"
+      "formatter-gofmt"
     ]
     telemetryConsent: "no"
     themes: [
@@ -39,9 +43,13 @@
   "file-types":
     "^Dockerfile\\..*$": "source.dockerfile"
     pipeline: "source.groovy"
+  "formatter-gofmt":
+    a: {}
+    go: {}
   "go-plus":
     format:
       tool: "gofmt"
+  "ide-golang": {}
   linter: {}
   "linter-eslint":
     global:
@@ -69,7 +77,6 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
-    showPanel: true
   minimap:
     plugins:
       linter: true

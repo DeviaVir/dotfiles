@@ -322,24 +322,25 @@ bar {
     workspace_buttons yes
     strip_workspace_numbers yes
     colors {
-        statusline         $white
+        statusline         $black
+
         background         $transparent
         separator          $transparent
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $white
+        focused_workspace  $transparent $transparent $darkwhite
         inactive_workspace $transparent $transparent $black
         active_workspace   $transparent $transparent $darkblack
-        urgent_workspace   $white       $white       $black
-        binding_mode       $white       $white       $black
+        urgent_workspace   $black       $darkblack   $white
+        binding_mode       $black       $darkblack   $white
     }
 }
 
 
-client.focused          $black      $black      $darkwhite  $darkblack  $darkblack
-client.unfocused        $black      $black      $white      $darkblack  $darkblack
-client.focused_inactive $black      $black      $white      $darkblack  $darkblack
-client.urgent           $white      $white      $black      $white      $white
+client.focused          $black      $black      $white  $darkblack  $darkblack
+client.unfocused        $black      $black      $darkwhite      $darkblack  $darkblack
+client.focused_inactive $black      $black      $darkwhite      $darkblack  $darkblack
+client.urgent           $darkwhite      $darkwhite      $black      $darkwhite      $darkwhite
 client.background       $black
 
 # exec
@@ -353,12 +354,12 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id clipit
-exec_always --no-startup-id feh --bg-fill --randomize /home/chase/Pictures/Wallpapers/Sexy/*
+exec_always --no-startup-id feh --bg-fill --randomize /home/chase/Pictures/Wallpapers/*
 #exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id "xss-lock -- /home/chase/.scripts/lock.sh"
 exec --no-startup-id "/home/chase/.scripts/lightsonplus/lightson+"
 exec --no-startup-id "xscreensaver"
-exec --no-startup-id compton -c
+exec --no-startup-id picom --config ~/.config/picom.conf
 exec --no-startup-id thunar --daemon
 
 # startup programs

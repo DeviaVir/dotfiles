@@ -39,3 +39,5 @@
 	sslKey = /etc/docker/certs.d/glregistry.blockstream.io/gl.key
 	sslCert = /etc/docker/certs.d/glregistry.blockstream.io/gl.cert
 	sslVerify = false
+[pull]
+	rebase = true

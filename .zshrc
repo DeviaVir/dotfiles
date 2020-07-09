@@ -35,6 +35,9 @@ alias ls=exa --group
 # there will be time to write sudo when I'm dead
 alias pacman='sudo pacman'
 
+# go to git root
+alias wd='git `git rev-parse --show-toplevel`'
+
 # custom work things
 [ -f "/etc/bashrc_fitbit" ] && source /etc/bashrc_fitbit
 
@@ -49,9 +52,9 @@ export VAGRANT_MEMORY_SIZE=3084
 export ELECTRON_TRASH=trash-cli
 
 #powerline
-pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')
-pl_zsh_module=${pl_python_path}/powerline/bindings/zsh/powerline.zsh
-[ -f "$pl_zsh_module" ] && source "$pl_zsh_module"
+#pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')
+#pl_zsh_module=${pl_python_path}/powerline/bindings/zsh/powerline.zsh
+#[ -f "$pl_zsh_module" ] && source "$pl_zsh_module"
 
 #nvm
 export NVM_DIR="/home/chase/.nvm"
