@@ -12,6 +12,20 @@
 set $mod Mod4
 set $editor vim
 
+# Window Borders
+default_border none
+default_floating_border 1pixel
+
+# Hides vertical and horizontal borders when there's only one window
+hide_edge_borders both
+
+# set colors
+set $bg-color            #000000
+set $inactive-bg-color   #000000
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
 set_from_resource $darkgreen   color2  #000000
@@ -30,6 +44,8 @@ set_from_resource $white       color15 #000000
 set $black       #282828
 set $darkblack   #1d2021
 set $transparent #00000000
+set $transparentwhite #33FFFFFF
+set $transparentblack #33000000
 
 set $height 34
 
@@ -43,7 +59,7 @@ force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
 
 floating_minimum_size -1 x -1
-floating_maximum_size 1920 x 1080
+floating_maximum_size 3440 x 1440
 
 bindsym $mod+Tab workspace back_and_forth
 
@@ -58,7 +74,7 @@ set $tag7 "7: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Roboto, Font Awesome 5 Free 16px
+font pango: Open Sans Regular, Roboto, Font Awesome 5 Free 16px
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -79,6 +95,7 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 
 # kill focused window
+bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
 # change focus
@@ -269,39 +286,37 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
-
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down $height px
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
 for_window [class="(?i)blueman"] floating enable
-
 #for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)recordmydesktop"] floating enable
-
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
 assign [class="(?i)chromium"]                          $tag1
+assign [class="(?i)google-chrome-stable"]              $tag1
 assign [class="(?i)zoom"]                              $tag4
 assign [class="(?i)sublime_text" window_type="splash"] $tag2
 assign [class="(?i)sublime_text" window_type="normal"] $tag2
 assign [class="(?i)atom"]                              $tag2
+assign [class="(?i)code"]                              $tag2
 assign [class="(?i)xfce4-terminal"]                    $tag3
 assign [class="(?i)alacritty"]                         $tag3
 assign [class="(?i)kitty"]                             $tag3
 assign [class="(?i)mailspring"]                        $tag5
 assign [class="(?i)whatever"]                          $tag6
 assign [class="(?i)signal"]                            $tag4
-assign [class="(?i)prismatik"]                         $tag6
 assign [class="(?i)steam"]                             $tag6
 assign [class="(?i)postman"]                           $tag5
 assign [class="(?i)keybase"]                           $tag4
+assign [class="(?i)obsidian"]                          $tag4
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -310,7 +325,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango: Roboto, Font Awesome 5 Free 16px
+    font pango: TeX Gyre Heros Regular, Roboto, Font Awesome 5 Free 16px
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
@@ -325,10 +340,10 @@ bar {
         statusline         $black
 
         background         $transparent
-        separator          $transparent
+        separator          $black
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $darkwhite
+        focused_workspace  $transparent $transparent #005EE6
         inactive_workspace $transparent $transparent $black
         active_workspace   $transparent $transparent $darkblack
         urgent_workspace   $black       $darkblack   $white
@@ -337,11 +352,20 @@ bar {
 }
 
 
-client.focused          $black      $black      $white  $darkblack  $darkblack
-client.unfocused        $black      $black      $darkwhite      $darkblack  $darkblack
-client.focused_inactive $black      $black      $darkwhite      $darkblack  $darkblack
-client.urgent           $darkwhite      $darkwhite      $black      $darkwhite      $darkwhite
-client.background       $black
+#client.focused          $black      $black      $white  $darkblack  $darkblack
+#client.unfocused        $black      $black      $darkwhite      $darkblack  $darkblack
+#client.focused_inactive $black      $black      $darkwhite      $darkblack  $darkblack
+#client.urgent           $darkwhite      $darkwhite      $black      $darkwhite      $darkwhite
+#client.background       $black
+#
+# class                 border  backgr. text    indicator child_border
+client.focused          $transparent #ff0000 #ffffff #ff0000   $transparent
+client.focused_inactive $transparent #5f676a #ffffff #484e50   $transparent
+client.unfocused        $transparent #222222 #888888 #292d2e   $transparent
+client.urgent           $transparent #900000 #ffffff #900000   $transparent
+client.placeholder      $transparent #0c0c0c #ffffff #000000   $transparent
+
+client.background       $transparent
 
 # exec
 exec xrdb -merge ~/.Xresources
@@ -359,30 +383,36 @@ exec_always --no-startup-id feh --bg-fill --randomize /home/chase/Pictures/Wallp
 exec --no-startup-id "xss-lock -- /home/chase/.scripts/lock.sh"
 exec --no-startup-id "/home/chase/.scripts/lightsonplus/lightson+"
 exec --no-startup-id "xscreensaver"
-exec --no-startup-id picom --config ~/.config/picom.conf
+exec --no-startup-id picom --config ~/.config/picom.conf --experimental-backends
 exec --no-startup-id thunar --daemon
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # startup programs
-exec --no-startup-id /usr/bin/chromium
+#exec --no-startup-id /usr/bin/chromium
+exec --no-startup-id /usr/bin/google-chrome-stable
 #exec --no-startup-id /home/chase/.local/bin/whatever
 exec --no-startup-id /usr/bin/signal-desktop
 #exec --no-startup-id /usr/bin/sublime_text
-exec --no-startup-id /usr/bin/atom
+#exec --no-startup-id /usr/bin/atom
+exec --no-startup-id /usr/bin/code
 #exec --no-startup-id /usr/bin/alacritty
 exec --no-startup-id /usr/bin/kitty
 #exec --no-startup-id /usr/bin/franz-bin
 #exec --no-startup-id /usr/bin/irccloud
 #exec --no-startup-id /var/lib/snapd/snap/bin/mailspring
-exec --no-startup-id /usr/bin/prismatik
+#exec --no-startup-id /usr/bin/prismatik
 #exec --no-startup-id /usr/bin/wavebox
 #exec --no-startup-id /usr/bin/thunderbird
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
 exec --no-startup-id nm-applet
 exec --no-startup-id "/bin/systemctl --user import-environment"
-exec --no-startup-id usbguard-applet-qt
-exec --no-startup-id yubioath-desktop
+#exec --no-startup-id yubioath-desktop
 exec --no-startup-id run_keybase
-exec --no-startup-id das-keyboard-q
+exec --no-startup-id insync start
+#exec --no-startup-id obsidian
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+#exec --no-startup-id /usr/bin/dunst
+#exec --no-startup-id /bin/bash /home/chase/.scripts/launch.sh
 exec_always --no-startup-id "xset s 1800 1800"
 
 
@@ -392,18 +422,20 @@ bindsym $mod+space exec "rofi -show run"
 bindsym Print exec --no-startup-id xfce4-screenshooter -r -s ~/Screenshots
 bindsym $mod+i exec --no-startup-id imgur-screenshot
 bindsym $mod+l exec "sh /home/chase/.scripts/lock.sh"
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 1%+
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 #bindsym $mod+v exec anamnesis --browse
 
-gaps inner 10
-gaps outer 0
-smart_gaps on
-smart_borders on
+for_window [class=".*"] border pixel 2
+gaps inner 20
+gaps outer 4
+gaps top 0
+#smart_gaps on
+#smart_borders on
 
 bindsym $mod+1 workspace $tag1
 bindsym $mod+2 workspace $tag2

@@ -23,11 +23,12 @@
     closeDeletedFileTabs: true
     disabledPackages: [
       "atom-ftp-editor"
-      "linter"
       "linter-golinter"
       "go-plus"
       "go-debug"
       "formatter-gofmt"
+      "language-hcl"
+      "linter"
     ]
     telemetryConsent: "no"
     themes: [
@@ -77,6 +78,7 @@
     travisExecutablePath: "/home/chase/.gem/ruby/2.5.0/bin/travis"
   "linter-ui-default":
     hidePanelWhenEmpty: true
+    showPanel: true
   minimap:
     plugins:
       linter: true

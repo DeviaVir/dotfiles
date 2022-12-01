@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+# connect to headset
+if ! bluetoothctl info 00:1B:66:BE:3F:E8 | grep -q "Connected: yes"; then
+	bluetoothctl connect 00:1B:66:BE:3F:E8 || systemctl restart bluetooth && bluetoothctl connect 00:1B:66:BE:3F:E8
+else
+	bluetoothctl disconnect 00:1B:66:BE:3F:E8
+fi

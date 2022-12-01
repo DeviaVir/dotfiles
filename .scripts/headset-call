@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+# list all cardS: pacmd list-cards
+index=$(pacmd list-cards | grep bluez_card -B1 | grep index | awk '{print $2}')
+
+if pacmd list-cards | grep "active profile" | grep -q a2dp_sink; then
+	pacmd set-card-profile $index headset_head_unit
+else
+	pacmd set-card-profile $index a2dp_sink_aptx
+fi

@@ -3,11 +3,12 @@
     smudge = git-lfs smudge %f
     required = true
 [user]
-    email = chase@sillevis.net
-    name = Chase Sillevis
+	email = chase@sillevis.net
+	name = Chase Sillevis
     signingKey = 8EB884FD
 [push]
     default = simple
+	autoSetupRemote = true
 [color]
     ui = auto
 [commit]
@@ -41,3 +42,5 @@
 	sslVerify = false
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main

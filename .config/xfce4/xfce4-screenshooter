@@ -1,4 +1,8 @@
 app=none
 last_user=
-screenshot_dir=file:///home/chase/Screenshots
+screenshot_dir=file:/home/chase/Screenshots
+last_extension=png
+enable_imgur_upload=true
+show_in_folder=false
+custom_action_command=none
 

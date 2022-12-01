@@ -36,10 +36,13 @@ alias ls=exa --group
 alias pacman='sudo pacman'
 
 # go to git root
-alias wd='git `git rev-parse --show-toplevel`'
+alias wd='cd `git rev-parse --show-toplevel`'
+
+# switch gcloud
+alias gcloudswitch='gcloud config set account $(git config user.email)'
 
 # custom work things
-[ -f "/etc/bashrc_fitbit" ] && source /etc/bashrc_fitbit
+#[ -f "/etc/bashrc_fitbit" ] && source /etc/bashrc_fitbit
 
 # defaults
 export EDITOR=/usr/bin/vim
@@ -50,6 +53,9 @@ export LANG=en_US.UTF-8
 export VAGRANT_SYNCHED_FOLDER=/home/chase/
 export VAGRANT_MEMORY_SIZE=3084
 export ELECTRON_TRASH=trash-cli
+export GO111MODULE=on
+export GOROOT=/usr/lib/go
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 #powerline
 #pl_python_path=$(pip show powerline-status | grep Location | sed 's/Location: //g')
@@ -152,3 +158,28 @@ bindkey '^[[B' history-beginning-search-forward
 
 # opam configuration
 test -r /home/chase/.opam/opam-init/init.zsh && . /home/chase/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# ruby
+eval "$(rbenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/chase/.local/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/home/chase/.local/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/chase/.local/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/chase/.local/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/chase/.anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chase/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/chase/.anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chase/.anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
