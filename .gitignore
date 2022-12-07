@@ -316,3 +316,8 @@ ApplicationSettings.xml
 .boto
 .config/doctl/
 .config/obs-studio/
+.adventofcode.session
+.huggingface/
+.krew/
+kubecm.config
+stable-diffusion-webui/

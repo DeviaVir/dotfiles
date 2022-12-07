@@ -1,0 +1,22 @@
+# InvokeAI initialization file
+# This is the InvokeAI initialization file, which contains command-line default values.
+# Feel free to edit. If anything goes wrong, you can re-initialize this file by deleting
+# or renaming it and then running configure_invokeai.py again.
+
+# The --root option below points to the folder in which InvokeAI stores its models, configs and outputs.
+--root="/home/chase/Sites/charity/invokeai"
+
+# the --outdir option controls the default location of image files.
+--outdir="/home/chase/Sites/charity/invokeai/outputs"
+
+# generation arguments
+--no-nsfw_checker
+--sampler=k_heun
+--steps=20
+
+# You may place other  frequently-used startup commands here, one or more per line.
+# Examples:
+# --web --host=0.0.0.0
+# --steps=20
+# -Ak_euler_a -C10.0
+#

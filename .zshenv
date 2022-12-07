@@ -4,6 +4,7 @@ export QT_DEVICE_PIXEL_RATIO=auto
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH=~/.local/lib/go
 export TASKDDATA=$HOME/.config/taskd
+export LIBVA_DRIVER_NAME=nvidia
 
 # gcloud
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
@@ -28,6 +29,8 @@ path=("$HOME/vendor/bin" $path)
 path=("$HOME/.scripts" $path)
 path=("$HOME/.gem/ruby/3.0.0/bin" $path)
 path=("/opt/cuda/bin", $path)
+path=("$HOME/.cargo/bin", $path)
+path=("$HOME/.krew/bin", $path)
 path=($^path(N)) # remove paths that don't exist
 
 # device specific env kept out of git

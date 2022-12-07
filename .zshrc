@@ -148,6 +148,8 @@ alias FUCK='fuck'
 alias ducks='du -cks * | sort -rn | head'
 alias md5sum='md5 -r'
 alias localandroid='qemu-system-x86_64 -m 2048 -boot d -enable-kvm -smp 3 -net nic -net user -hda android-marshmallow.img'
+alias kc='kubectl kc'
+alias k='kubectl'
 
 # history search
 bindkey -e
@@ -182,4 +184,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export PATH="${PATH}:${HOME}/.krew/bin"
 
+source <(kubectl completion zsh)
+source <(kubectl kc completion zsh)
