@@ -321,3 +321,5 @@ ApplicationSettings.xml
 .krew/
 kubecm.config
 stable-diffusion-webui/
+.guix-profile
+.cachekeybase.app.serverConfig
